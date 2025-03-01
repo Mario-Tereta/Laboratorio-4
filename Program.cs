@@ -126,7 +126,7 @@ class Program
             File.Move(origen, destino);      // Mover el archivo a la nueva direccion
             Console.WriteLine("Archivo se movio de forma exitosa.");
         }
-        catch (FileNotFoundException)
+        catch (FileNotFoundException) 
         {
             Console.WriteLine("Error: El archivo 'Inventos.txt' no existe. ¡Ultron debe haberlo borrado!"); // se lanza si el sistema no puede encontrar parte de la ruta especificada.
         }
@@ -150,7 +150,7 @@ class Program
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error: {ex.Message}");
+            Console.WriteLine($"Error: {ex.Message}"); //imprime un mensaje en la consola que indica que ocurrió un error, seguido del mensaje de la excepción
         }
     }
 
@@ -158,34 +158,39 @@ class Program
     {
         try
         {
-            
-            string[] archivos = Directory.GetFiles(Listado);
-            foreach (string archivo in archivos)
+            string[] archivos = Directory.GetFiles(Listado); // Obtener los archivos de la carpeta
+            Console.WriteLine("Archivos en el directorio: ");
+            foreach (string archivo in archivos)    // Mostrar los archivos
             {
                 Console.WriteLine(archivo);
             }
+            
+            string[] carpetas = Directory.GetDirectories(Listado);  // Obtener las carpetas de la carpeta
+            Console.WriteLine("Carpetas en el directorio: ");
+            foreach (string carpeta in carpetas)                        // Mostrar las carpetas
+            {
+                Console.WriteLine(carpeta);
+            }
         }
-        catch (Exception ex)
+        catch (Exception e)
         {
-            Console.WriteLine($"Error: {ex.Message}");
+            Console.WriteLine("Ocurrió un error: " + e.Message);
         }
-    }
+            }
 
-    static void Borrarxseguridad(string ruta)
+    static void Borrarxseguridad(string ruta) //Funcion para borrar el archivo original despues de copiarlo
     {
-        File.Delete(ruta);
+        File.Delete(ruta); // Borrar el archivo original
         Console.WriteLine("\nPor seguridad los archivos copiados son EXTERMINADOS de su origen.");
     }
 
 
-    static void submenu2()
+    static void submenu2()  //submenu para las opciones de resguardo de archivos
     {
-        Console.Clear();
+        Console.Clear();        //limpia la consola
         Console.WriteLine("------------------Bienvenido al Sistema Stark------------");
         Console.WriteLine("Seleccione entre las opciones para resguardar archivos");
-        Console.WriteLine("1. Copiar archivo");
-        Console.WriteLine("2. Mover archivo");
-        Console.WriteLine("3. Crear Carpeta Secreta");
+        Console.WriteLine("1. Copiar archivo \n2. Mover Archivos \n3.Crear Carpeta Secreta");
         string Opcion2 = Console.ReadLine();
 
         switch (Opcion2)
@@ -203,18 +208,15 @@ class Program
                 Console.WriteLine("Opción no válida.");
                 break;
         }
-        Console.ReadKey();
+        Console.ReadKey(); //espera a que el usuario presione una tecla
     }
 
-    static void submenu1()
+    static void submenu1() //submenu para las opciones de archivos
     {
         Console.Clear();
-        Console.WriteLine("------------------Bienvenido al Sistema Stark------------");
+        Console.WriteLine("------------------ Bienvenido al Sistema Stark ------------------");
         Console.WriteLine("Seleccione entre las opciones de archivos");
-        Console.WriteLine("1. Crear archivo");
-        Console.WriteLine("2. Agregar invento");
-        Console.WriteLine("3. Leer archivo línea por línea");
-        Console.WriteLine("4. Leer todo el texto del archivo");
+        Console.WriteLine("1. Crear archivo \n2. Agregar Invento nuevo \n3. Leer Archivos línea por línea \n4. Leer todo el texto del archivo");
         string Opcion2 = Console.ReadLine();
 
         switch (Opcion2)
@@ -238,19 +240,15 @@ class Program
         Console.ReadKey();
     }
     static void Main(string[] args)
-    {
-        // Definir la ruta y el nombre del archivo
-        newdoc(Path.GetDirectoryName(ruta0));
+    {        
+        newdoc(Path.GetDirectoryName(ruta0)); //Se crea la carpeta principal desde el arranque del programa
         while (true)
         {
             Console.Clear();
-            Console.WriteLine("------------------Bienvenido al Sistema Stark------------");
-            Console.WriteLine("1. Opciones de Archivo");
-            Console.WriteLine("2. Resguardo de Archivos");
-            Console.WriteLine("3. Listar archivos");
-            Console.WriteLine("4. Salir\n");
+            Console.WriteLine("------------------ Bienvenido al Sistema Stark ------------------");
+            Console.WriteLine("1. Opciones de Archivo \n2. Resguardo de Archivo \n3. Listar Archivos \n4. Salir\n");
 
-            string opcion = Console.ReadLine();
+            string opcion = Console.ReadLine(); // Seleccionar una opción para ir a los otros submenus, de esta forma es mas amigable para el usuario y sencillo de entender
 
             switch (opcion)
             {
