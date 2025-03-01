@@ -1,0 +1,14 @@
+C:\Laboratorio4\Laboratorio4\bin\Debug\net8.0\Laboratorio4.exe
+C:\Laboratorio4\Laboratorio4\bin\Debug\net8.0\Laboratorio4.deps.json
+C:\Laboratorio4\Laboratorio4\bin\Debug\net8.0\Laboratorio4.runtimeconfig.json
+C:\Laboratorio4\Laboratorio4\bin\Debug\net8.0\Laboratorio4.dll
+C:\Laboratorio4\Laboratorio4\bin\Debug\net8.0\Laboratorio4.pdb
+C:\Laboratorio4\Laboratorio4\obj\Debug\net8.0\Laboratorio4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Laboratorio4\Laboratorio4\obj\Debug\net8.0\Laboratorio4.AssemblyInfoInputs.cache
+C:\Laboratorio4\Laboratorio4\obj\Debug\net8.0\Laboratorio4.AssemblyInfo.cs
+C:\Laboratorio4\Laboratorio4\obj\Debug\net8.0\Laboratorio4.csproj.CoreCompileInputs.cache
+C:\Laboratorio4\Laboratorio4\obj\Debug\net8.0\Laboratorio4.dll
+C:\Laboratorio4\Laboratorio4\obj\Debug\net8.0\refint\Laboratorio4.dll
+C:\Laboratorio4\Laboratorio4\obj\Debug\net8.0\Laboratorio4.pdb
+C:\Laboratorio4\Laboratorio4\obj\Debug\net8.0\Laboratorio4.genruntimeconfig.cache
+C:\Laboratorio4\Laboratorio4\obj\Debug\net8.0\ref\Laboratorio4.dll
